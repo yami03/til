@@ -1,7 +1,7 @@
-#마크다운 사용법 
+# 마크다운 사용법 
 
 
-##The tooling
+## The tooling
 vscode 에서 [__Code Runner__](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 와 [__Markdown Preview Enhanced__](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) 를 설치 
 
 ##Paragraphs and Text Decoration
