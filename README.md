@@ -1,7 +1,8 @@
 # til
 >:sunflower: Today I Learned :sunflower:
+>
+>:sunflower:나는 오늘 배웠어:sunflower:
 
-"나는 오늘 배웠어"
 매일 공부한 내용을 텍스트로 정리합니다.
 
 ---
