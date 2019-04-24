@@ -11,11 +11,19 @@
 
 # Table of Contents
 
+<<<<<<< Updated upstream
 * Value(#value)
 * Number(#number)
 * String(#string)
 * Boolean(#Boolean)
 * Null & Undefined
+=======
+* [Value](#value)
+* [Number](#number)
+* [String](#string)
+* [Boolean](#Boolean)
+* [Null & Undefined](null--undefined)
+>>>>>>> Stashed changes
 
 # value
 
