@@ -23,7 +23,7 @@
 ---
 ## JavaScript
 
-* [Value, Number, String, Boolen, null&undefinde](javascript/value-number-string-boolean-null-undefined.md)
+* [Value, Number, String, Boolen, null&undefined](javascript/value-number-string-boolean-null-undefined.md)
 * [Operator, Fuction Control Flow](javascript/operators-function-control-flow.md)
 * [Array, Object](javascript/array-object.md)
 * [Primitive, reference](javascript/primitive-reference.md)
