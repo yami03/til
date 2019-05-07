@@ -3,7 +3,9 @@
 >
 >:sunflower:나는 오늘 배웠어:sunflower:
 
-매일 공부한 내용을 텍스트로 정리합니다.
+매일 공부한 내용을 마크다운으로 정리합니다.
+
+
 
 
 
@@ -16,6 +18,9 @@
 
 
 
+
+
+---
 ## JavaScript
 
 * [Value, Number, String, Boolen, null&undefinde](javascript/value-number-string-boolean-null-undefined.md)
@@ -23,6 +28,8 @@
 * [Array, Object](javascript/array-object.md)
 * [Primitive, reference](javascript/primitive-reference.md)
 * [값으로서의 함수](javascript/function-as-value.md)
+
+
 
 
 
