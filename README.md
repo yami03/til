@@ -1,6 +1,4 @@
-# til
->:sunflower: Today I Learned :sunflower:
->
+# TIL(Today I Learned)
 >:sunflower:나는 오늘 배웠어:sunflower:
 
 매일 공부한 내용을 마크다운으로 정리합니다.
@@ -28,6 +26,9 @@
 * [Array, Object](javascript/array-object.md)
 * [Primitive, reference](javascript/primitive-reference.md)
 * [값으로서의 함수](javascript/function-as-value.md)
+* [콜백 함수(Callback function)](javascript/callback-function.md)
+
+
 
 
 
