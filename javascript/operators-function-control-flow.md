@@ -19,7 +19,7 @@ function add(x, y) {
 ```
 
 유사배열이라고 할 수 있다.
-  
+
 ```js
 function add(x, y){
     return function bar () {};
@@ -44,7 +44,7 @@ console.log(a); //undefined
 
 return은 return 문구를 실행시키고 function을 종료 시킨다.
 
-**클로즈 스코프를 찾아서 공부해보기**
+**클로저 스코프를 찾아서 공부해보기**
 
 # Control Flow
 
