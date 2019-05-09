@@ -33,6 +33,8 @@
 * [객체지향프로그래밍](javscript/object-oriented-progrmming.md)
 * [생성자와 new](javascript/constructor-and-new.md)
 * [전역객체(Global object)](javascript/global-object.md)
+* [this](javascript.this.md)
+* [상속(Inheritance)](javascript/inheritance.md)
 
 
 
