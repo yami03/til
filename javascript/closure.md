@@ -125,11 +125,11 @@ for문을 이용해 배열에 for문을 담고 싶다! 하지만,
 ```js
 var arr = [];
 for(var i = 0; i < 5; i++){
-    arr[i] = function(id){
+    arr[i] = (function(id){
         return function(){
             return id;
         }
-    }(i);
+    })(i);
 }
 for(var index in arr) {
     console.log(arr[index]());
