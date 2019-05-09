@@ -31,7 +31,7 @@ var catAge = 7;
 ## Type
 
 ```js
-console.log(typeof 1); //"string"
+console.log(typeof 1); //"number"
 ```
 * 문자열(스트링으로)로 number가 나온다.
 * 모든걸 문자열로 반환한다.
