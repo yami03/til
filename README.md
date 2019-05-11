@@ -36,10 +36,10 @@
 * [this](javascript/this.md)
 * [상속(Inheritance)](javascript/inheritance.md)
 * [prototype](javascript/prototype.md)
-
-
-
-
+* [표준 내장 객체와 확장](javascript/standard-built-in-object.md)
+* [Object 객체](javascirpt/object-object.md)
+* [data type - wrapper object](javascirpt/data-type-wrapper-object.md)
+* [참조](javascript/reference.md)
 
 
 
