@@ -113,3 +113,112 @@ theBomb: true 이 속성의 이름으로 포함되어 있기 때문에 `true`를
 
 ```
 
+## AboutMutability.js
+
+### 정의한 prototype 을 다시 변형
+
+```js
+it("should expect prototype properties to be public and mutable", function () {
+    function Person(firstname, lastname) {
+      this.firstname = firstname;
+      this.lastname = lastname;
+    }
+    Person.prototype.getFullName = function () {
+      return this.firstname + " " + this.lastname;
+    };
+
+    var aPerson = new Person ("John", "Smith");
+    expect(aPerson.getFullName()).toBe(FILL_ME_IN);
+
+    aPerson.getFullName = function () {
+      return this.lastname + ", " + this.firstname;
+    };
+
+    expect(aPerson.getFullName()).toBe(FILL_ME_IN);
+});
+```
+
+쒸익쒸익 다시 정의할 때엔 prototype을 안써도 됨. 메소드를 다시 정의하는거라 두번 할 필요가 없나보다.
+
+
+
+### 백번봐도 좋을 문제 생성자 args의 private 
+
+문제
+
+```js
+it("should know that variables inside a constructor and constructor args are private", function () {
+  function Person(firstname, lastname) {
+    var fullName = firstname + " " + lastname;
+
+    this.getFirstName = function () { return firstname; };
+    this.getLastName = function () { return lastname; };
+    this.getFullName = function () { return fullName; };
+  }
+  var aPerson = new Person ("John", "Smith");
+
+  aPerson.firstname = "Penny";
+  aPerson.lastname = "Andrews";
+  aPerson.fullName = "Penny Andrews";
+
+  expect(aPerson.getFirstName()).toBe(FILL_ME_IN);
+  expect(aPerson.getLastName()).toBe(FILL_ME_IN);
+  expect(aPerson.getFullName()).toBe(FILL_ME_IN);
+
+  aPerson.getFullName = function () {
+    return aPerson.lastname + ", " + aPerson.firstname;
+  };
+
+  expect(aPerson.getFullName()).toBe(FILL_ME_IN);
+});
+```
+
+풀이
+
+```js
+it("should know that variables inside a constructor and constructor args are private", function () {
+  function Person(firstname, lastname) {
+    var fullName = firstname + " " + lastname;
+	
+    this.getFirstName = function () { return firstname; };
+    this.getLastName = function () { return lastname; };
+    this.getFullName = function () { return fullName; };
+  }
+  var aPerson = new Person ("John", "Smith");
+```
+
+일단 여기까지 확인해보면 객체인데 this.fullname으로 정의하지않고 var fullname으로 함수내의 지역변수로 정의하여 바깥에서 접근할 방법이 없는 비공개가 되었다. 
+
+```js
+  aPerson.firstname = "Penny";
+  aPerson.lastname = "Andrews";
+  aPerson.fullName = "Penny Andrews";
+
+  expect(aPerson.getFirstName()).toBe(FILL_ME_IN);
+  expect(aPerson.getLastName()).toBe(FILL_ME_IN);
+  expect(aPerson.getFullName()).toBe(FILL_ME_IN);
+```
+
+그래서 이렇게 `aPerson.firstname = "Penny";` 재 정의를 하였지만 비공개가되어 변경이 불가능 하여 생성자 안에 있는 메소드들은 생성자안에 있는 지역변수를 따르기 때문에 args로 넣은 값들이 그대로 나온다.  
+
+```js
+aPerson.getFullName = function () {
+    return aPerson.lastname;
+  };
+```
+
+프로토타입을 재정의 할 수도 있고, 
+
+```js
+aPerson.firstname = "Penny";
+aPerson.lastname = "Andrews";
+aPerson.fullName = "Penny Andrews";
+```
+
+이 프로퍼티들도 살아 있으며,  
+
+```js
+expect(aPerson.getFullName()).toBe(FILL_ME_IN);
+```
+
+이 메소드에 영향을 주며 잘 호출된다 'ㅁ'/ 
