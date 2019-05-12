@@ -58,6 +58,7 @@ console.log(a); //1
 
 변수 a의 값을 변경한게 아니라 b에 a값을 담은것이다. 
 그래서 1
+그리고 a와 b는 둘다 primitive type이라 a와 b라는 독립적인 공간이 생긴다. 
 
 ```js
 var a = {'id':1};
