@@ -270,8 +270,35 @@ console.log(mother.children === children);
 
 
 1. children에 mother.children을 할당했다.
+
 2. mother.children에는 father.children을 할당함.
+
 3. mother.children은 father.children의 위치값을 가지게 되고..
+
 4. children은 mother.children의 위치값을 가지게 되어 다르다!
 
    `var children은 값이 업데이트 되지않음.. 'ㅁ'/` 
+
+> 계속 이 예시가 이해하기 힘들었던 이유는 업데이트 탓이 아니였다.
+>
+> mother.children 에 새로운 객체를 정의했기 때문이다. 
+
+```js
+function updateAge () { this.age++; };
+
+var son = { age: 3, growUp: updateAge };
+
+var daughter = { age: 7, growUp: updateAge };
+
+var mother = { age: 38, growUp: updateAge, children: [son, daughter] };
+
+var father = { age: 38, growUp: updateAge, wife: mother, children: [son, daughter] };
+
+var children = mother.children;
+
+son.age = 2;
+
+console.log(children[0].age); //2
+```
+
+children은 여전히 업데이트가 가능했고, 오히려 새로운 **객체를 정의했다** 그래서 참조값이 달라진다는 해석이 더 나한테 이해하기 쉽다. 
