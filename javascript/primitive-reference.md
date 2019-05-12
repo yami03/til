@@ -45,7 +45,7 @@ var a = 6;
 var list1 = [1, 2, 3];
 var list2 = [1, 2, 3];
 
-console.log(a === b);
+console.log(list1 === list2);
 ```
 
 list1랑 list2가 과연 같을까? `false`! 이유는
@@ -209,9 +209,9 @@ console.log(test2);
 
 test1
 
-[] 이 안에 있는 요소  daughter를 콕 찝어서 비교한다. 
+[] 이 안에 있는 요소  daughter를 콕 찝어서 비교한다.  둘다 primitive 라 비교도 가능하다.
 
-son은 같은 변수 daughter를 바라보기 때문에 `true`!
+`true`!
 
 
 
