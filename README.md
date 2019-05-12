@@ -1,25 +1,17 @@
 # TIL(Today I Learned)
->:sunflower:나는 오늘 배웠어:sunflower:
+>:sunflower:나는 오늘 배웠쓰:sunflower:
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-
-
-
-
 ---
-
 ## Categories
 
 * [JavaScript](#JavaScript)
+* [JavaScript-koans](#javaScript-koans) 
 * [Markdown](#markdown)
 
-
-
-
-
 ---
-## JavaScript
+### JavaScript
 
 * [Value, Number, String, Boolen, null&undefined](javascript/value-number-string-boolean-null-undefined.md)
 * [Operator, Fuction Control Flow](javascript/operators-function-control-flow.md)
@@ -41,10 +33,11 @@
 * [data type - wrapper object](javascirpt/data-type-wrapper-object.md)
 * [참조](javascript/reference.md)
 
-
+---
+### JavaScript-Koans
+* [오답노트](javascript-koans/javascript-koans.md)
 
 ---
-
 ### Markdown
 
 - [마크다운 사용법](markdown/마크다운_사용법.md)
