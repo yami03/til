@@ -8,9 +8,9 @@
 ---
 ## Categories
 
-* Cmder(#cmd)
-* Debug(#debug)
-* Git from the hell
+* [Cmder](#cmd)
+* [Debug](#debug)
+* [Git from the hell](#Git from the hell)
 * [JavaScript](#JavaScript)
 * [JavaScript-koans](#javaScript-koans) 
 * [Markdown](#markdown)
@@ -27,9 +27,9 @@
 
 ---
 ### Git from the hell
-* [지옥에서 온 Git](git from the hell/git-from-the-hell.md)
-* [init, status, add, commit, log 명령어와 stage, repository차이](git from the hell/init-status-add-commit-log-stage-repository)
-* [log와 diff](git from the hell/log-diff.md)
+* [지옥에서 온 Git](git_from_the_hell/git-from-the-hell.md)
+* [init, status, add, commit, log 명령어와 stage, repository차이](git_from_the_hell/init-status-add-commit-log-stage-repository)
+* [log와 diff](git_from_the_hell/log-diff.md)
 
 ---
 ### JavaScript
