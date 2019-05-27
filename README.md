@@ -48,11 +48,11 @@
 
 * [Closure](javascript/closure.md)
 
-* [Arguments](javascirpt/aruments.md)
+* [Arguments](javascirpt/arguments.md)
 
 * [함수의 호출 - Apply](javascript/function-apply.md)
 
-* [객체지향프로그래밍](javscript/object-oriented-progrmming.md)
+* [객체지향프로그래밍](javascript/object-oriented-progrmming.md)
 
 * [생성자와 new](javascript/constructor-and-new.md)
 
