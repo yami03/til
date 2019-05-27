@@ -1,6 +1,6 @@
 # Hoisting 
 
-끌어 올리다. 
+자신이 속한 scope에서 최상단까지 끌어올린다.
 
 ```js
 console.log(a);//error

@@ -49,7 +49,7 @@ var obj = {
 var obj = {
     name: 'sla',
     Age: '2n',
-	birthday: 0427    
+    birthday: 0427    
 };
 
 for (var key in obj){
@@ -110,7 +110,7 @@ function bar() {
     return 'name';
 }
 
-console.log(obj[a]); //변수 a= 'naem'; 이 들어가서 'sla'
+console.log(obj[a]); //변수 a= 'name'; 이 들어가서 'sla'
 console.log(obj['name']); //key[a]는 'name'이라 바로 호출 가능 'sla'
 console.log(obj.name); //들어간 스트링값으로 호출 가능 'sla'
 console.log(obj[foo()]); //a변수가 리턴되어 호출 가능 'sla'
