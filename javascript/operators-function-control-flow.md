@@ -6,6 +6,8 @@ false || true && false
 연산자 우선순위가 있다. <br>
 사람이 읽는게 코드이기 때문에 먼저 연산되길 바라는 곳엔 괄호를 먼저 하는게 좋다. 
 
+[MDN 논리연산자 예시보기]([https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/%EB%85%BC%EB%A6%AC_%EC%97%B0%EC%82%B0%EC%9E%90(Logical_Operators)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/논리_연산자(Logical_Operators))
+
 # Function  
 
 ## arguments
