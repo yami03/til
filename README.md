@@ -8,12 +8,20 @@
 ---
 ## Categories
 
-* [Cmder](#cmd)
+* [Algorithm](#algorithm)
+* [Cmder](#cmder)
 * [Debug](#debug)
-* [Git from the hell](#Git from the hell)
+* [ECMAScript 2015](#ECMAScript 2015)
+* [Git from the hell](#Git-from-the-hell)
 * [JavaScript](#JavaScript)
 * [JavaScript-koans](#javaScript-koans) 
 * [Markdown](#markdown)
+* [ETC](#ETC)
+
+---
+### Algorithm
+
+* [The Office II - Boredom Score](algorithm/the-office-2-boredom-score.md)
 
 ---
 ### Cmder
@@ -26,6 +34,10 @@
 * [trackClicksEx function error](javascript/trackClicksEx-function-error.md)
 
 ---
+### ECMAScript 2015
+* [let, const, rest parameter, spread operator, destructuring](ecma_script2015/let-const-rest-parameter-spread-operator-destructuring.md)
+* [default parameter, template literals, arrow function](ecma_script2015/default-parameter-template-literals-arrow-functions.md)
+----
 ### Git from the hell
 * [지옥에서 온 Git](git_from_the_hell/git-from-the-hell.md)
 * [init, status, add, commit, log 명령어와 stage, repository차이](git_from_the_hell/init-status-add-commit-log-stage-repository)
@@ -48,7 +60,7 @@
 
 * [Closure](javascript/closure.md)
 
-* [Arguments](javascirpt/arguments.md)
+* [Arguments](javascript/arguments.md)
 
 * [함수의 호출 - Apply](javascript/function-apply.md)
 
@@ -66,15 +78,19 @@
 
 * [표준 내장 객체와 확장](javascript/standard-built-in-object.md)
 
-* [Object 객체](javascirpt/object-object.md)
+* [Object 객체](javascript/object-object.md)
 
-* [data type - wrapper object](javascirpt/data-type-wrapper-object.md)
+* [data type - wrapper object](javascript/data-type-wrapper-object.md)
 
 * [참조](javascript/reference.md)
+
+* [객체 생성 패턴 3가지](javascript/object-litaral-function-prototype.md)
 
 * [Scope](javascript/scope.md)
 
 * [Hoisting](javascript/hoisting.md)
+
+* [함수 실행에 따른 this 정의 4가지](master/javascript/this-4way.md)
 
   
 
@@ -86,3 +102,6 @@
 ### Markdown
 
 - [마크다운 사용법](markdown/마크다운_사용법.md)
+
+---
+### ETC 
