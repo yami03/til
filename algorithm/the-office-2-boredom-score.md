@@ -200,6 +200,6 @@ function boredom(staff){
 Object.keys() 메서드는 key를 배열로 반환해준다. 그 배열을 가지고 Array.prototype.reduce()를 이용하면 숏코드로 해결할 수 있다.
 총 합은 reduce() 메소드를 이용하도록 하자
 
-[js파일 바로가기]([https://github.com/yami03/algorithm/tree/master/Codewars/07%20-%20The%20Office%20II%20-%20Boredom%20Score](https://github.com/yami03/algorithm/tree/master/Codewars/07 - The Office II - Boredom Score))
+[js파일 바로가기](https://github.com/yami03/algorithm/blob/master/Codewars/07%20-%20The%20Office%20II%20-%20Boredom%20Score/boredomScore.js)
 
  
