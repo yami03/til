@@ -3,7 +3,7 @@
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-28 TILS
+33 TILS
 
 ---
 ## Categories
@@ -11,7 +11,7 @@
 * [Algorithm](#algorithm)
 * [Cmder](#cmder)
 * [Debug](#debug)
-* [ECMAScript 2015](#ECMAScript 2015)
+* [ECMAScript 2015](#ECMAScript-2015)
 * [Git from the hell](#Git-from-the-hell)
 * [JavaScript](#JavaScript)
 * [JavaScript-koans](#javaScript-koans) 
