@@ -70,7 +70,7 @@
 * [객체 생성 패턴 3가지](javascript/object-litaral-function-prototype.md)
 * [Scope](javascript/scope.md)
 * [Hoisting](javascript/hoisting.md)
-* [함수 실행에 따른 this 정의 4가지](master/javascript/this-4way.md)
+* [함수 실행에 따른 this 정의 4가지](javascript/this-4way.md)
 
 ---
 ### JavaScript-Koans
