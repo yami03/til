@@ -31,7 +31,7 @@
 ---
 ### Debug
 
-* [trackClicksEx function error](javascript/trackClicksEx-function-error.md)
+* [trackClicksEx function error](debug/trackClicksEx-function-error.md)
 
 ---
 ### ECMAScript 2015
