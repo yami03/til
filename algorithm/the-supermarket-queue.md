@@ -33,7 +33,7 @@ There is a queue for the self-checkout tills at the supermarket. Your task is wr
   // should return 12
   ```
 
-* ### Clarifications
+* Clarifications
 
   * There is only ONE queue serving many tills, and
   * The order of the queue NEVER changes, and
@@ -44,6 +44,7 @@ There is a queue for the self-checkout tills at the supermarket. Your task is wr
 customers []는 인자 하나하나가 손님이 계산하는데 걸리는 시간이다.
 n은 셀프 계산대의 수 
 만약 customers는 [10,2,3,3] 이고 n이 2라면,
+
 
 | 계산대1 | 계산대2 |
 | ------- | ------- |
@@ -117,7 +118,7 @@ function queueTime(customers, n) {
 
 랜덤 테스트 통과
 
-**[@Hacker Sakana](https://www.codewars.com/users/Hacker Sakana), [@chris_steenekamp](https://www.codewars.com/users/chris_steenekamp), [@VadymBoguslavsky](https://www.codewars.com/users/VadymBoguslavsky), [@cristhian.mesta](https://www.codewars.com/users/cristhian.mesta)'s Solution**
+**[@Hacker Sakana](https://www.codewars.com/users/Hacker), [@chris_steenekamp](https://www.codewars.com/users/chris_steenekamp), [@VadymBoguslavsky](https://www.codewars.com/users/VadymBoguslavsky), [@cristhian.mesta](https://www.codewars.com/users/cristhian.mesta)'s Solution**
 
 ```js
 function queueTime(customers, n) {
@@ -180,4 +181,3 @@ return Math.max(...w);
 그리고 리턴값은 Math.max() + spread operator와 합쳐 배열에서 가장 큰수를 찾아낸다!
 대단해 ! 
 재밌다 :astonished:
-
