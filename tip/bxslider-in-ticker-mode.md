@@ -1,6 +1,6 @@
 # BxSlider로 텍스트 흐르는 효과 만들기
 
-![예시 이미지](C:\Users\Administrator\Desktop\study\til\tip\images\ezgif.com-crop.gif)
+![예시 이미지](images/ezgif.com-crop.gif)
 
 [예시 사이트 보러가기](<https://www.ssfshop.com/special/45059/view?brndShopId=8SBSS&brandShopNo=BDMA07A01&leftBrandNM=8SECONDS_8SBSS&&utag=ref_tpl:11108$ref_cnr:10771$ref_br:8SBSS$set:1$dpos:1>)
 
