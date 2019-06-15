@@ -3,7 +3,7 @@
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-33 TILS
+43 TILS
 
 ---
 ## Categories
@@ -16,12 +16,20 @@
 * [JavaScript](#JavaScript)
 * [JavaScript-koans](#javaScript-koans) 
 * [Markdown](#markdown)
+* [Tip](#Tip)
 * [ETC](#ETC)
 
 ---
 ### Algorithm
 
+* [find key](algorithm/find-key.md)
+* [Find the odd int](algorithm/find-odd-Int.md)
+* [Divisible Sum Pairs](algorithm/divisible-sum-pairs.md)
 * [The Office II - Boredom Score](algorithm/the-office-2-boredom-score.md)
+* [The Office III - Broken Photocopier](algorithm/the-office-3-broken-photocopier.md)
+* [The Supermarket Queue](algorithm/the-supermarket-queue.md)
+* [Directions Reduction](algorithm/directions-reduction.md)
+* [Simple Pig Latin](algorithm/simple-pig-latin.md)
 
 ---
 ### Cmder
@@ -42,8 +50,9 @@
 ---
 ### Git from the hell
 * [지옥에서 온 Git](git_from_the_hell/git-from-the-hell.md)
-* [init, status, add, commit, log 명령어와 stage, repository차이](git_from_the_hell/init-status-add-commit-log-stage-repository)
+* [init, status, add, commit, log 명령어와 stage, repository차이](git_from_the_hell/init-status-add-commit-log-stage-repository.md)
 * [log와 diff](git_from_the_hell/log-diff.md)
+* [reset, rever](git_from_the_hell/reset-rever.md)
 
 ---
 ### JavaScript
@@ -82,4 +91,9 @@
 - [마크다운 사용법](markdown/마크다운_사용법.md)
 
 ---
+### Tip
+[BxSlider로 텍스트 흐르는 효과 만들기](tip/bxslider-in-ticker-mode.md)
+
+---
 ### ETC 
+[알고리즘 코드리뷰](etc/algorithm-code-review.md)
