@@ -156,5 +156,4 @@ dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"]) => []
 하지만 이 코드는 이전요소와 현재 요소를 비교하여 이전요소를 삭제하기 때문에 
 이전요소가 새로운 환경에 따른 상황에 훨씬 대응하기 편한 코드이다.
 
- [js파일보기](https://github.com/yami03/algorithm/blob/master/Codewars/12 - Directions Reduction/dirReduc.js)
-
+ [js파일보기](https://github.com/yami03/algorithm/blob/master/Codewars/12%20-%20Directions%20Reduction/dirReduc.js)

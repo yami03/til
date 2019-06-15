@@ -70,5 +70,5 @@ num === '0' ?  1 : 0;
 
 이렇게 arrow 함수의 한줄 return으로 사용할껄 아쉬움이 남는다.
 
-[js 파일 바로가기](https://github.com/yami03/algorithm/blob/master/Codewars/08 - The Office III - Broken Photocopier/broken.js)
+[js 파일 바로가기](https://github.com/yami03/algorithm/blob/master/Codewars/08%20-%20The%20Office%20III%20-%20Broken%20Photocopier/broken.js)
 
