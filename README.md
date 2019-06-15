@@ -88,7 +88,7 @@
 ---
 ### Markdown
 
-- [마크다운 사용법](markdown/마크다운_사용법.md)
+- [마크다운 사용법](markdown/use-markdown.md)
 
 ---
 ### Tip
