@@ -124,11 +124,11 @@ https://github.com/yami03 <br>
 
 ### 기본 이미지 추가법
 ```
-![yami03](https://avatars3.githubusercontent.com/u/36615680?s=460&v=4 "profile")
+![yami03](images/36615680.jpg "profile")
 ![alt](이미지 url "title")
 !표는 이미지를 뜻한다.
 ```
-![yami03](https://avatars3.githubusercontent.com/u/36615680?s=460&v=4 "profile")
+![yami03](images/36615680.jpg "profile")
 
 <br>
 
@@ -136,12 +136,12 @@ https://github.com/yami03 <br>
 ```
 ![yami03][profile]
 
-[profile]: https://avatars3.githubusercontent.com/u/36615680?s=460&v=4
+[profile]: images/36615680.jpg
 링크와 동일하게 key value로 쓸 수 있다.
 ```
 ![yami03][profile]
 
-[profile]: https://avatars3.githubusercontent.com/u/36615680?s=460&v=4
+[profile]: images/36615680.jpg
 
 <br>
 
@@ -150,13 +150,13 @@ https://github.com/yami03 <br>
 [![yami03](https://avatars3.githubusercontent.com/u/36615680?s=460&v=4)](https://github.com/yami03)
 [![alt](이미지링크)](이미지링크)
 ```
-[![yami03](https://avatars3.githubusercontent.com/u/36615680?s=460&v=4)](https://github.com/yami03)
+[![yami03](images/36615680.jpg)](https://github.com/yami03)
 
 <br>
 
 ### 이미지태그 사용1
 ```
-[<img src="https://avatars3.githubusercontent.com/u/36615680?s=460&v=4">](https://github.com/yami03)
+[<img src="images/36615680.jpg">](https://github.com/yami03)
 [<img src="이미지링크">](링크)
 ```
 
@@ -164,7 +164,7 @@ https://github.com/yami03 <br>
 
 ### 이미지태그 사용2
 ```
-<img src= "https://avatars3.githubusercontent.com/u/36615680?s=460&v=4" >
+<img src= "images/36615680.jpg" >
 <style>
 img{}
 </ style>
@@ -216,7 +216,7 @@ img{}
 1. text1
 1. text2
 1. text3
-    
+   
     숫자는 1을 쓰는걸 추천한다. 왜냐면 하나가 추가된다고 뒤에 숫자를 특별히 신경 쓸 필요가 없다.
 
 <br>
