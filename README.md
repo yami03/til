@@ -53,7 +53,7 @@
 * [지옥에서 온 Git](git_from_the_hell/git-from-the-hell.md)
 * [init, status, add, commit, log 명령어와 stage, repository차이](git_from_the_hell/init-status-add-commit-log-stage-repository.md)
 * [log와 diff](git_from_the_hell/log-diff.md)
-* [reset, rever](git_from_the_hell/reset-rever.md)
+* [reset, revert](git_from_the_hell/reset-revert.md)
 
 ---
 ### JavaScript
