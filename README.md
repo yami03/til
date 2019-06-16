@@ -3,7 +3,7 @@
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-43 TILS
+45 TILS
 
 ---
 ## Categories
@@ -15,6 +15,7 @@
 * [Git from the hell](#Git-from-the-hell)
 * [JavaScript](#JavaScript)
 * [JavaScript-koans](#javaScript-koans) 
+* [JavaScript30](#JavaScript30)
 * [Markdown](#markdown)
 * [Tip](#Tip)
 * [ETC](#ETC)
@@ -86,14 +87,21 @@
 * [오답노트](javascript-koans/javascript-koans.md)
 
 ---
+### JavaScript30
+
+* [25 - Event Capture, Propagation, Bubbling and Once](javascript30/event-capture-and-propagation-bubbling-and-once.md)
+
+---
 ### Markdown
 
 - [마크다운 사용법](markdown/use-markdown.md)
 
 ---
 ### Tip
-[BxSlider로 텍스트 흐르는 효과 만들기](tip/bxslider-in-ticker-mode.md)
+* [BxSlider로 텍스트 흐르는 효과 만들기](tip/bxslider-in-ticker-mode.md)
 
 ---
 ### ETC 
-[알고리즘 코드리뷰](etc/algorithm-code-review.md)
+* [알고리즘 코드리뷰](etc/algorithm-code-review.md)
+* [내가 TIL 시작한 계기 - 바닐라코딩 수강](etc/vanilla-coding.md)
+
