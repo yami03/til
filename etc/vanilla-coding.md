@@ -86,7 +86,7 @@
 
 **일일 커밋**
 깃허브에서 일일 커밋을 한번 해보고 싶었다. 하지만 뭘 올려야 할지도 모르겠고 꾸준히 하기 힘들었는데, 바코와 함께 시작하게 되었다. 바코가 길잡이가 되어주면서 올릴게 너무너무 많다! (공부할 것들이 너무 많다. :joy: )
-![github](C:\Users\Administrator\Desktop\study\til\etc\images\github.png)
+![github](images/github.png)
 
 보라색이 바코 상담한 날이다. 저 날 알고리즘 repository를 새로 팠는데 회사랑 병행하다 보니 꾸준히 하지 못하였다. 그리고 빨간색이 바코 프렙 시작일이다. 
 
