@@ -119,3 +119,25 @@ function divisibleByThree(str){
 str을 split('')을 사용하지 않고 배열로 만든점이 신선하다.
 또한 아직 문자열을 `+d+s`로 하여(순서를 바꿈) 숫자로 바꿔버림.
 
+### Sum of Digits / Digital Root
+
+---
+
+[link](https://www.codewars.com/kata/sum-of-digits-slash-digital-root/javascript) 인자로 받은 숫자가 계속 더하여 한자리가 되면 리턴한다!
+
+```js
+digital_root(16)
+=> 1 + 6
+=> 7
+```
+
+[Balkoth](https://www.codewars.com/users/Balkoth), [fidelius](https://www.codewars.com/users/fidelius), [FunGuy](https://www.codewars.com/users/FunGuy), [rojohnmico](https://www.codewars.com/users/rojohnmico), [Mattordrag](https://www.codewars.com/users/Mattordrag), [Binayre](https://www.codewars.com/users/Binayre) 's Solution
+
+```js
+function digital_root(n) {
+  return (n - 1) % 9 + 1;
+}
+```
+
+헉 무조건 답이 나오는데 이유는 모르겠다. 헉
+
