@@ -60,9 +60,9 @@ What the heck is the event loop anyway? | **Philip Roberts** | JSConf EU
 
 ### V8의 런타임 - Memory Heap 과 Call Stack
 
-* Memory Heap: 메모리 할당이 이루어지는 곳
+* **Memory Heap**: 메모리 할당이 이루어지는 곳(자료구조 heap이랑은 다르다.)
 
-* Call Stack: 코드가 실행되면 스택 프레임이 쌓이는 곳
+* **Call Stack**: 코드가 실행되면 스택 프레임이 쌓이는 곳
 
 > V8 소스에는 setTimeout 이나 DOM, HTTP 요청을 관리하는 코드들은 찾아 볼 수 없다!
 > 비동기 코딩에서 가장 먼저 떠오르는 것들이 없는거다.
@@ -80,6 +80,55 @@ What the heck is the event loop anyway? | **Philip Roberts** | JSConf EU
 콜 스택은 데이터 스트럭처로 실행되는 순서를 기억하고 있다. 
 함수를 실행하려면 스택에 해당하는 함수를 집어넣게 되는데 함수에서 리턴이 일어나면 스택의 가장 위쪽에서 해당 함수를 꺼내게 된다. 이게 콜스택!
 
+## 콜백 큐(Callback Queue)
 
+함수들이 줄서서 기다리는 공간이다. 
 
+## Run To Completion
+
+자바스크립트 성질. 
+한번 실행되면 끝장을 본다. 
+
+```js
+console.log(1);
+
+console.log(2);
+
+setTimeout (function() {
+  console.log(4);
   
+  setTimeout(function() {
+    console.log(6);
+  }, 1000);
+  
+  console.log(5);
+}, 1000);
+console.log(3);
+```
+
+단계단계 끝장을 봐야 다음 순서가 실행될 수 있다. 
+
+## 정확히 2초 후에 실행되는가?
+
+```js
+setTimeout(function() {
+	alert(1);
+},2000);
+```
+이런 함수가 있는데 스택 -> 콜백 큐로 가는 시간도 포함된다.
+
+## Render Queue
+
+보여질 작업들을 줄 세운다.
+
+## Dom Construction
+
+바이트로 먼저 받는다 -> 문자로 변경된다 -> token화 한다. 노드로 만들기 전처리 전 -> node(객체로 하나하나 만든다) -> 트리구조로 만든다.
+
+DOM 트리 + CSSOM 트리 => Render Tree -> layout -> paint
+
+**Records**
+
+* layout
+* paint - 실제로 픽셀을 채워가는.
+
