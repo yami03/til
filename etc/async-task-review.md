@@ -1,4 +1,4 @@
-# async 과제 후기 - 비동기, 동기, 클로저
+# async 과제 후기 - 비동기, 동기, 클로저, 배열과 객체
 
 async 메소드를 만드는 과제
 
@@ -14,11 +14,19 @@ async 메소드를 만드는 과제
 for문을 이용한다.
 한꺼번에 실행하기 때문에 for문이 적절하다.
 
+메소드 - each, every, filter, some, groupBy, parallel, detect, times
+
+<br>
+
 ### 직렬형
 
 ---
 
 순차적으로 하기 때문에 재귀함수를 사용한다.
+
+메소드 - reduce, series, memoize, waterfall, whilst, forever
+
+<br>
 
 ### 클로저
 
@@ -69,9 +77,31 @@ for(var i = 0; i < collection.length; i++) {
       count += 1;
       if(count === collection.length) callback(null);
   	});
-  })(i);  
+  })(i);
 }
 ```
 
+<br>
 
+### Array와 Object를 구분해서 짜기
+
+---
+
+**length**를 구할때는
+
+```js
+const lengthOfCollection = collection.length || Object.keys(collection).length;
+```
+
+로 length값을 구한다.
+
+**Object.values() 를 사용하자**
+
+```js
+const values = Object.values(collection);
+const item = Array.isArray(collection) ? collection[i] : values[i];
+```
+
+`const keys = Object.keys(collection)`을 사용했었는데 이러면 `collection[keys[num]]`으로 복잡해진다.
+또한 `Array.isArray()`를 사용해야하는 이유는, 객체의 key값이 `숫자`일 경우 collection[숫자]를 피해갈 수 없기 때문에 꼭 써줘야 한다.
 
