@@ -105,11 +105,13 @@ console.log(Foo.prototype); // {constructor: ƒ}
 콘솔에 직접 찍어본다면 생성자 함수가 맞던 아니던 `함수명.prototype`으로 찍어보면 함수는 prototype이라는 속성을 가지고 있고 값으로는 `{constructor: ƒ} `를 확인 할 수 있다.
 
 prototype에 해당되는 value는 객체임을 확인 할 수 있다.
+
 의사 코드로 설명한다면 `Foo = { prototype: {} }`로 생각할 수 있다.
 
 <br>
 
-![console화면을 확인했을때](image/prptotype01.png)
+![console화면을 확인했을때](image/prptotype01.png =100x100)
+
 prototype의 value로 `{}`객체를 가지고 있으며,
 그 객체들은 자동적으로 key와 value가 설정되어져 있다. 또한 constructor의 value는 자기자신 Foo()로 설정되어 있는 것을 확인 할 수 있다. 
 
