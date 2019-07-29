@@ -153,7 +153,9 @@ prototype의 value로 `{}`객체를 가지고 있으며,
 
 <br>
 **정리하자면**
+
 ![생성자함수와 prototype의 관계](image/prptotype03.png)
+
 * Constructor는 .prototye이라는 속성을 가진다.
 * .prototype속성은 Prototype이라는 객체를 가진다. 
 * Prototype객체는 .constructor라는 속성을 가지게 된다.
@@ -301,7 +303,7 @@ var kennim = new Person('ken ken');
 
 kennim.constructor === Person;
 kennim.__proto__ === Person.prototype;
-```
+ ```
 마지막 2줄을 자세히 살펴보자.
 
 <br>
@@ -352,7 +354,7 @@ console.log(Foo.prototype); // 생성자함수.prototype - 엄마
 console.log(typeof Foo.prototype) // 객체다. 객체가 어떻게 만들어 지는가? new Object() 이렇게다.
 
 // Foo.prototype 얘 또한 누군가의 자식이란 말이다. 
-```
+ ```
 
 <br>
 
