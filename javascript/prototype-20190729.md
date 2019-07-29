@@ -110,7 +110,6 @@ prototype에 해당되는 value는 객체임을 확인 할 수 있다.
 <br>
 
 ![console화면을 확인했을때](image/prptotype01.png)
-
 prototype의 value로 `{}`객체를 가지고 있으며,
 그 객체들은 자동적으로 key와 value가 설정되어져 있다. 또한 constructor의 value는 자기자신 Foo()로 설정되어 있는 것을 확인 할 수 있다. 
 
@@ -119,7 +118,6 @@ prototype의 value로 `{}`객체를 가지고 있으며,
 **Construct는 .prototype 속성을 가지고 .prototype은 Prototype이라고 불리는 객체를 가지고 있다.**
 
 ![생성자함수와 prototype의 관계](image/prptotype02.png)
-
 * 생성자 함수를 만들었다!(모든함수 다 포함이 가능하다)
 * 생성자 함수는 자동으로 `prototype`이라는 속성을 가지게 된다.
 * 이 `prototype 속성`이 갖고 있는 value는 어떤 하나의 `prototype이라는 부르는 객체`이다.
@@ -135,32 +133,27 @@ prototype의 value로 `{}`객체를 가지고 있으며,
 **console로 확인해보자**
 
 ![생성자 만들기](image/prptotype04.png)
-
 * Object라는 생성자 함수가 있다.
 
 <br>
 
 ![prtotype 확인](image/prptotype05.png)
-
 * 이 Object라는 생성자 함수에는 .prototype이라는 속성을 가지고 있고 이 .prototype은 Prototype이라는 객체를 가지고 있다.
 
 <br>
 
 ![prtotype 객체의 constructor속성 확인](image/prptotype06.png)
-
 * prototype이라는 객체에는 constructor라는 속성이 있는데 그 속성은 생성자함수를 가리킨다.
 
 <br>
 
 ![prtotype 객체의 constructor속성 확인](image/prptotype07.png)
-
 * constuctor속성은 constructor를 가리킨다. 
 * construct는 또 prototype이라는 속성을 가진다. 
 
 <br>
 **정리하자면**
 ![생성자함수와 prototype의 관계](image/prptotype03.png)
-
 * Constructor는 .prototye이라는 속성을 가진다.
 * .prototype속성은 Prototype이라는 객체를 가진다. 
 * Prototype객체는 .constructor라는 속성을 가지게 된다.
@@ -289,7 +282,6 @@ obj에게 haha를 만들어 주지 않았는데! haha를 가짐!  👩‍👧
 __ proto __ 이렇게 생긴걸 Dunder Proto라고 한다.
 
 ![Objec](image/prptotype13.png)
-
 a 라는 instance를 생성후 a를 console에 찍어보면 {} 빈객체가 보인다.
 그 안을 열어보면 Prototype(엄마)가 가지는 속성과 값이 있다! {constructior: Object}
 엄마의 정보를 저장해 놓은 것이다. 
@@ -309,8 +301,7 @@ var kennim = new Person('ken ken');
 
 kennim.constructor === Person;
 kennim.__proto__ === Person.prototype;
- ```
-
+```
 마지막 2줄을 자세히 살펴보자.
 
 <br>
@@ -318,7 +309,6 @@ kennim.__proto__ === Person.prototype;
 ```js
 kennim.constructor === Person;
 ```
-
 kennim에는 constructor라는 속성이 없다. 그렇기 때문에 엄마인 prototype에서 살펴볼 것이고,
 prototype은 .constructor라는걸 가지고 있다. 이 .construct는 아빠를 바라본다.
 아빠는 Constructor고 그것은 Person이기 때문에 `true`다!
@@ -328,7 +318,6 @@ prototype은 .constructor라는걸 가지고 있다. 이 .construct는 아빠를
 ```js
 kennim.__proto__ === Person.prototype;
 ```
-
 아까 위에서 봤듯이 Dunder proto는 Prototype이 가진 정보를 가지고 있었다. 
 그렇기 때문에 `true`
 
@@ -343,13 +332,11 @@ o.constructor = function bar () {}
 
 console.log(o.constructor === Object); // false;
 ```
-
 `o 인스턴스` 자식이 가진 constructor를 가장 먼저 찾는데 그것은 bar function 이기 때문에 false가 된다.
 
 <br>
 
 ![Dunder Proto](image/prptotype14.png) 
-
 * 자식이 엄마에게 접근하고자 할 때 Dunder proto로 할 수 있긴 하다. 하지만 하면 안된다.
 * 저걸 쓰여야 하는 상황은 코드가 제대로 짜여있지 않다는 것이기 때문에 그 오류를 해결해야지 접근하면 안된다.
 
@@ -365,7 +352,7 @@ console.log(Foo.prototype); // 생성자함수.prototype - 엄마
 console.log(typeof Foo.prototype) // 객체다. 객체가 어떻게 만들어 지는가? new Object() 이렇게다.
 
 // Foo.prototype 얘 또한 누군가의 자식이란 말이다. 
- ```
+```
 
 <br>
 
@@ -379,7 +366,6 @@ Foo.prototype 얘의 엄마는 누굴까?**
 얘에게도 엄마의 정보를 가진 `__proto__`가 있다.
 
 ![Dunder Proto](image/prptotype15.png)
-
 엄마의 정보가 나왔다.
 
 <br>
@@ -387,7 +373,6 @@ Foo.prototype 얘의 엄마는 누굴까?**
 잠깐 Object.prototype을 확인하자.
 
 ![Dunder Proto](image/prptotype16.png)
-
 이 정보는 Foo.prototype. __ proto __ 와 Object.proto와 똑같다.
 
 <br>
@@ -408,7 +393,6 @@ Foo.prototype.__proto__ === Object.prototype; // true;
 <br>
 
 ![Dunder Proto](image/prptotype17.png)
-
 지금 접근한 상황을 그림으로 그리게 되면 이렇게 되는 것이다. (이것이 마지막 그림이길 빈다...)
 
 * 남편은 Foo
