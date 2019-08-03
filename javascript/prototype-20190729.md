@@ -110,32 +110,42 @@ prototype에 해당되는 value는 객체임을 확인 할 수 있다.
 
 <br>
 
-![console화면을 확인했을때](image/prptotype01.png =100x100)
+<br>
+
+<img src="image/prptotype01.png " width="270" align="left" >
 
 prototype의 value로 `{}`객체를 가지고 있으며,
 그 객체들은 자동적으로 key와 value가 설정되어져 있다. 또한 constructor의 value는 자기자신 Foo()로 설정되어 있는 것을 확인 할 수 있다. 
 
 <br>
 
+<br>
+
 **Construct는 .prototype 속성을 가지고 .prototype은 Prototype이라고 불리는 객체를 가지고 있다.**
 
-![생성자함수와 prototype의 관계](image/prptotype02.png)
+<img src="image/prptotype02.png " width="760">
+
 * 생성자 함수를 만들었다!(모든함수 다 포함이 가능하다)
 * 생성자 함수는 자동으로 `prototype`이라는 속성을 가지게 된다.
 * 이 `prototype 속성`이 갖고 있는 value는 어떤 하나의 `prototype이라는 부르는 객체`이다.
 
 <br>
 
+<br>
+
 **Prototype이라고 불리는 객체에는 항상 반드시 .construct라는 속성을 가진다.**
 
-![생성자함수와 prototype의 관계](image/prptotype03.png)
+<img src="image/prptotype03.png " width="760">
+
+<br>
 
 <br>
 
 **console로 확인해보자**
 
-![생성자 만들기](image/prptotype04.png)
-* Object라는 생성자 함수가 있다.
+<img src="image/prptotype04.png " width="760">
+
+Object라는 생성자 함수가 있다.
 
 <br>
 

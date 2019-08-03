@@ -43,9 +43,23 @@ length - 1 만큼 순회한다. 그치만 장담할 수 없다.
 
 ### Big O
 
-| Worst Case |                                             | Best Case |                            |
+| Worst Case |                                   |Space Complexity|
 | ---------- | ------------------------------------------- | --------- | -------------------------- |
 | O(n**2)    | 한번 훑을때  전체를 훑고 총 횟수는 n번이다. | O(n)      | 모든게 다 정렬이 되어있다. |
+
+
+
+| Time Complexity ||| Space Complexity  |
+| --------------- | ---- | ---- | ---- |
+|                 |      |      |      |
+|                 |      |      |      |
+
+| First Header  | Second Header | Third Header         |
+| :------------ | :-----------: | -------------------: |
+| First row     | Data          | Very long data entry |
+| Second row    | **Cell**      | *Cell*               |
+| Third row     | Cell that spans across two columns  ||
+
 
 한번더 순회해야하는지 순회를 끝내야하는지를 파악해야한다.
 
@@ -87,6 +101,20 @@ length - 1 만큼 순회한다. 그치만 장담할 수 없다.
 ### 단점
 
 * 성능적으로 별로다.
+
+```js
+function insertionSort(arr) {
+  for(let i = 1; i < arr.length i++){
+    let key = arr[i];
+    for(let j = i - 1; i >= 0 && arr[j] > key; j--) {
+      arr[j+1] = arr[j];
+    }
+    arr[j+1] = key;
+  }
+}
+```
+
+
 
 <br>
 
