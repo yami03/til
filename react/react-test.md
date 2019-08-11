@@ -5,10 +5,14 @@
 **npm 설치**
 
 * Jest 기본으로 설치 되어 있었음
-* npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
+* `npm install --save enzyme enzyme-adapter-react-16 react-test-renderer`
   * Testing Components를 위해 필요하다.
-* npm install --save jest-enzyme
+* `npm install --save jest-enzyme`
   * 코드를 더 간단하게 작성 할 수 있도록 도와준다.
+* `yarn add enzyme-to-json`
+  * 스냅샷 테스팅을 도와준다.
+
+
 
 **파일 경로**
 
@@ -54,6 +58,24 @@ it('arrange day', () => {
 ```
 
  `npm test`로 실행 할 수 있다.
+
+## Shallow Rendering
+
+**참조 url**
+
+* [reactjs 페이지](https://ko.reactjs.org/docs/shallow-renderer.html)
+* [enzyme](https://airbnb.io/enzyme/docs/api/shallow.html)
+* [ceate-react-app](https://facebook.github.io/create-react-app/docs/running-tests)
+* [velopert님의 블로그 글](https://velog.io/@velopert/react-testing-with-enzyme)
+
+
+
+**스냅샷 테스팅**
+
+렌더링된 결과가 이전과 동일한지 확인해주는 것이다.
+props 값을 변경하여 변경한 내용을 업데이트 하고 싶다면 터미널에서 u를 눌러준다.'ㅁ'/
+
+
 
 
 
