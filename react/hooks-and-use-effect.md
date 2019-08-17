@@ -95,3 +95,45 @@ useEffect(() => {
 ```
 
 이렇게 사용할 수 있다. 두번째 인자에 넣어준건 `listDataOfArticles`무한루프에 걸리기 때문에 비교할 데이터를 넣어준다.
+
+## useEffect의 return
+
+모든 답은 문서에 있다.
+
+[react 문서](https://ko.reactjs.org/docs/hooks-effect.html#explanation-why-effects-run-on-each-update)
+
+```js
+function FriendStatus(props) {
+  // ...
+  useEffect(() => {
+    // ...
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+    return () => {
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+    };
+  });
+```
+
+이런 이벤트가 있다.
+
+return은 Unmount가 실행되는 줄 알았지만 아니였다!
+
+```js
+// Mount with { friend: { id: 100 } } props
+ChatAPI.subscribeToFriendStatus(100, handleStatusChange);     // Run first effect
+
+// Update with { friend: { id: 200 } } props
+ChatAPI.unsubscribeFromFriendStatus(100, handleStatusChange); // Clean up previous effect
+ChatAPI.subscribeToFriendStatus(200, handleStatusChange);     // Run next effect
+
+// Update with { friend: { id: 300 } } props
+ChatAPI.unsubscribeFromFriendStatus(200, handleStatusChange); // Clean up previous effect
+ChatAPI.subscribeToFriendStatus(300, handleStatusChange);     // Run next effect
+
+// Unmount
+ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // Clean up last effect
+```
+
+run -> (clean up - run)  ->  (clean up - run) ->  (clean up - run) 을 반복적으로 실행하고 있었다.
+
+Unmount때 최종 Clean up이 된다.
