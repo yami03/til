@@ -141,3 +141,35 @@ function digital_root(n) {
 
 헉 무조건 답이 나오는데 이유는 모르겠다. 헉
 
+### Once bubble sort
+
+[hencethus](https://www.codewars.com/users/hencethus)' solution
+
+```js
+const bubblesortOnce = function([h, ...t]) {
+  return t.reduce(function(acc, v) {
+    if (h < v) [h, v] = [v, h];
+    return [...acc, v];
+  }, []).concat(h || []);
+};
+```
+
+하나씩 살펴보자.
+
+```js
+if (h < v) [h, v] = [v, h];
+```
+
+h < v보다 클경우. v = h가 되고 h = v가 된다.
+
+```js
+return [...acc, v];
+```
+
+return은 큰 값 h는 빼고 한다.
+
+```js
+concat(h || []);
+```
+
+이부분에서 마지막 []은 왜하는지 모르겠다.
