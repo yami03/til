@@ -3,7 +3,7 @@
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-46 TILS
+48 TILS
 
 ---
 ## Categories
@@ -32,6 +32,9 @@
 * [The Supermarket Queue](algorithm/the-supermarket-queue.md)
 * [Directions Reduction](algorithm/directions-reduction.md)
 * [Simple Pig Latin](algorithm/simple-pig-latin.md)
+* [Shortest Word](algorithm/shortest-word.md)
+* [Two Sum](algorithm/two-sum.md)
+* [Codewars Solutions](algorithm/codewars-solution.md)
 
 ---
 ### Cmder
@@ -40,7 +43,7 @@
 
 ---
 ### CSS Rendering
-* [코드스피츠 CSS Rendering 01 - Graphics System, Rendering System, Normal Flow ](https://github.com/yami03/til/blob/master/css-rendering/01.md)
+* [코드스피츠 CSS Rendering 01 - Graphics System, Rendering System, Normal Flow ](css-rendering/01.md)
 
 ---
 ### Debug
