@@ -129,4 +129,156 @@ git checkout master
 git merge <다른 브랜치>
 ```
 
-### 
+### ### 충돌이 났을 때
+
+```shell
+## 충돌을 해결한 후 
+git add <파일>
+
+## 메세지를 쓰지 않아도 자동으로 생성
+git commit
+```
+
+### p4Merge
+
+Merge를 도와준다.
+
+참고 https://gist.github.com/tony4d/3454372
+
+```shell
+git config --global merge.tool p4mergetool
+
+git config --global mergetool.p4mergetool.cmd \
+"/Applications/p4merge.app/Contents/Resources/launchp4merge \$PWD/\$BASE \$PWD/\$REMOTE \$PWD/\$LOCAL \$PWD/\$MERGED"
+
+## 자동으로 add까지 해준다.
+git mergetool
+
+## 이전 충돌상황 체크
+cat work.txt.orig
+```
+
+ #### git workflow (git flow) 와 cherry-pick와 rebase
+
+git workflow 규칙을 적용하기
+
+cherry-pick을 이용하여 필요한 부분만 병합하기
+
+rebase 공간을 넣어두고 병합하기
+
+**추후 공부가 더 필요**
+
+### HEAD와 Branch와 commit
+
+### Detached
+
+Head가 더이상 branch를 가리키지 않고 저장소를 가리킬때 
+
+```shell
+git checkout <id>
+```
+
+
+
+### checkout vs reset
+
+* checkout (change)
+
+  HEAD를 제어한다.
+
+* reset (delete 느낌..)
+
+  브랜치 / 저장소를 가르키는 저장소를 가리킨다.
+
+## backup
+
+* HTTP 
+
+  보안이슈가 있다.
+
+* SSH
+
+  보안 문제는 없지만 사용하기에 공부가 필요
+
+### 원격 저장소 연결하기
+
+```shell
+git remote add origin <주소>
+
+## 연결 확인
+git remote
+
+## push하기, 어떤 원격저장소와 연결할지 셋팅한다.
+git push --set-upstram origin master
+```
+
+### clone
+
+```shell
+git clone <주소> <변경하고싶은 디렉토리명>
+```
+
+### pull
+
+```shell
+## 원격저장소로부터 다운받을 수 있다.
+git pull
+```
+
+## 협업
+
+```shell
+## 원격저장소 내용을 복사한다.
+git clone <주소>
+```
+
+### rejected
+
+push후 rejected가 뜬다면 다른사람이 작업한 것을 pull받지 않아 생긴일 
+
+```shell
+git mergetool 
+
+## 수정후 다시 add를 해야한다. 
+```
+
+### git fetch -> git merge FETCH_HEAD -> commit -> push
+
+를 통해 `pull -> commit -> push`와 똑같은 일을 할 수 있다.
+
+(HEAD -> master, origin/master)
+
+HEAD는 로컬저장소인 master를 가리키고 원격저장소는 origin/master라는 뜻이다.
+
+```shell
+## 확인해보면 원격저장소는 업데이트 되어있지만 로컬저장소는 업데이트 되어있지 않다.
+git fetch
+
+## 따로 merge가 필요하다.
+git merge origin/master
+```
+
+### 반복적인 origin/master 피하기 FETCH_HEAD
+
+```shell
+cat .git/FETCH_HEAD
+
+## 이전에 merge한 HEAD를 기억한다. 파일을 만듬으로
+git fetch; git merge FETCH_HEAD
+```
+
+### patch
+
+권한이 없는데 전달해주고 싶은경우
+
+```shell
+## 보내기
+git format-patch <작업직전의 id>
+
+## 받기
+git am -3 -i *.patch
+```
+
+### pull request
+
+포크후 오리진 레파지토리에 요청할 수 있다.
