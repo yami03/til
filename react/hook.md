@@ -102,7 +102,71 @@ reducer가 순수함수인거와 관련이 있지 않을까?
 그래서 useEffect나 useCallback 의존성 목록에 이 함수를 포함하지 않아도 괜찮다.
 
  초기화하는법 
-useReducer(reducer, 두번째 인자로 들어온다);
+`useReducer(reducer, initial);`
 
+두번째 인자로 설정한다. 
 
+**초기화를 지연할 수 있다.**
 
+```jsx
+function init(initialCount) {
+  return { count: initialCount };
+}
+```
+
+```js
+function reducer(state, action) {
+  switch(action.type) {
+  	// ...code
+    case 'reset':
+      return init(action.payload);
+    default:
+      throw new Error();
+  }
+}
+```
+
+```jsx
+function Counter({initialCount}) {
+  const [state, dispatch] = useReducer(reducer, initialCount, init);
+  return (
+  	<>
+    	Count: {state.count}
+			<button onClick={() => dispatch({typ: 'reset', payload: initalCount})}></button>
+			// ...code
+		</>
+  )
+}
+```
+
+useReducer의 3번째 인자를 이용하여 지연시킬 수 있다.
+
+state를 초기화할때도 유용하다. 
+
+## useCallback
+
+```jsx
+const memoizedCallback = useCallback(
+	() => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+```
+
+불필요한 렌더링을 방지해준다.
+콜백안에서 참조되는 모든 값은 의존성 값의 배열에 나타나야 한다.
+
+의존성 값의 배열이 콜백에 인자로 전달되지 않는다.
+
+## useMemo
+
+```jsx
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+```
+
+"생성(create)" 함수와 의존성 값을 배열에 전달
+**useMemo로 전달한 함수는 렌더링 중에 실행된다.**
+
+> 사이드 이펙트(side effects)는 useEffect에서 하는 일이지 useMemo에서 하는 일이 아니다.
+> 또한 useMemo를 사용하지 않고도 동작할 수 있도록 코드를 작성하고 그것을 추가하여 성능을 최적화 하세요.
