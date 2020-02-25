@@ -3,12 +3,12 @@
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-53 TILS
+54 TILS
 
 ---
 ## Categories
 
-* [TypeScript 🔥](#TypeScript)
+* [TypeScript 🔥](#TypeScript 🔥)
 * [Algorithm](#algorithm)
 * [Cmder](#cmder)
 * [CSS Rendering](#CSS-Rendering)
@@ -71,7 +71,7 @@
 * [log와 diff](git-from-the-hell/log-diff.md)
 * [reset, revert](git-from-the-hell/reset-revert.md)
 * [생활코딩 new git 영상보고 정리](git-from-the-hell/git-opentutorials.md)
-* [develop branch pull 하기](git-from-the-hell/pull-develop-branch)
+* [develop branch pull 하기](git-from-the-hell/pull-develop-branch.md)
 
 ---
 ### JavaScript
