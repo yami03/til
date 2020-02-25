@@ -377,3 +377,17 @@ if (typeof userInput === 'string') {
 ```
 
 extra check를 추가한다.
+
+## The Never Type
+```typescript
+function generateError(message: string, code: number): never {
+  throw {message: message, errorCode: code};
+  // while (true) {}
+}
+
+generateError('An error occurred!', 500);
+```
+
+함수에서 절대 return이 없을 때 사용한다. 
+
+generateError에 마우스를 올리면 void가 뜨지만 훨씬 명확하다.

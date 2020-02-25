@@ -3,11 +3,12 @@
 
 매일 공부한 내용을 마크다운으로 정리합니다.
 
-48 TILS
+53 TILS
 
 ---
 ## Categories
 
+* [TypeScript 🔥](#TypeScript)
 * [Algorithm](#algorithm)
 * [Cmder](#cmder)
 * [CSS Rendering](#CSS-Rendering)
@@ -20,6 +21,13 @@
 * [Markdown](#markdown)
 * [Tip](#Tip)
 * [ETC](#ETC)
+
+---
+### TypeScript 🔥
+
+* [learn typescript](typescript/learn-typescript.md)
+* [Type Guards and Differnetiating Types](typescript/type-guards-and-differnetiating-types.md)
+* [generic handbook 보고 정리](typescript/generic.md)
 
 ---
 ### Algorithm
@@ -62,33 +70,61 @@
 * [init, status, add, commit, log 명령어와 stage, repository차이](git-from-the-hell/init-status-add-commit-log-stage-repository.md)
 * [log와 diff](git-from-the-hell/log-diff.md)
 * [reset, revert](git-from-the-hell/reset-revert.md)
+* [생활코딩 new git 영상보고 정리](git-from-the-hell/git-opentutorials.md)
+* [develop branch pull 하기](git-from-the-hell/pull-develop-branch)
 
 ---
 ### JavaScript
 
 * [Value, Number, String, Boolen, null&undefined](javascript/value-number-string-boolean-null-undefined.md)
+
 * [Operator, Fuction Control Flow](javascript/operators-function-control-flow.md)
+
 * [Array, Object](javascript/array-object.md)
+
 * [Primitive, reference](javascript/primitive-reference.md)
+
 * [값으로서의 함수](javascript/function-as-value.md)
+
 * [콜백 함수(Callback function), 비동기처리](javascript/callback-function.md)
+
 * [Closure](javascript/closure.md)
+
 * [Arguments](javascript/arguments.md)
+
 * [함수의 호출 - Apply](javascript/function-apply.md)
+
 * [객체지향프로그래밍](javascript/object-oriented-progrmming.md)
+
 * [생성자와 new](javascript/constructor-and-new.md)
+
 * [전역객체(Global object)](javascript/global-object.md)
+
 * [this](javascript/this.md)
+
 * [상속(Inheritance)](javascript/inheritance.md)
+
 * [prototype](javascript/prototype.md)
+
 * [표준 내장 객체와 확장](javascript/standard-built-in-object.md)
+
 * [Object 객체](javascript/object-object.md)
+
 * [data type - wrapper object](javascript/data-type-wrapper-object.md)
+
 * [참조](javascript/reference.md)
+
 * [객체 생성 패턴 3가지](javascript/object-litaral-function-prototype.md)
+
 * [Scope](javascript/scope.md)
+
 * [Hoisting](javascript/hoisting.md)
+
 * [함수 실행에 따른 this 정의 4가지](javascript/this-4way.md)
+
+* [event loop](javascript/event-loop.md)
+
+
 
 ---
 ### JavaScript-Koans
@@ -102,7 +138,7 @@
 ---
 ### Markdown
 
-- [마크다운 사용법](markdown/use-markdown.md)
+* [마크다운 사용법](markdown/use-markdown.md)
 
 ---
 ### Tip
