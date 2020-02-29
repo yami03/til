@@ -1,14 +1,14 @@
 # TIL(Today I Learned)
 >:sunflower:나는 오늘 배웠어:sunflower:
 
-매일 공부한 내용을 마크다운으로 정리합니다.
+매일 공부한 내용을 마크다운으로 정리하자
 
 54 TILS
 
 ---
 ## Categories
 
-* [TypeScript 🔥](#TypeScript 🔥)
+* [TypeScript 🔥](#TypeScript-🔥)
 * [Algorithm](#algorithm)
 * [Cmder](#cmder)
 * [CSS Rendering](#CSS-Rendering)
