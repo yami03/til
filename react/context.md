@@ -55,7 +55,7 @@ const ColorBox = () => {
 export default ColorBox;
 ```
 
-<ColorContext.Consumer> 안에 함수를 넣어주는 패턴을 `Function as a child` 혹은  `Remder Props` 라고 한다.
+<ColorContext.Consumer> 안에 함수를 넣어주는 패턴을 `Function as a child` 혹은  `Render Props` 라고 한다.
 컴포넌트의 children이 있어야 할 자리에 함수를 전달한다. 
 
 **Function as a child or Render Props**
