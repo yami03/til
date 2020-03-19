@@ -213,7 +213,7 @@ DocumentAndElementEventHandlers, ElementCssInlineStyle, GlobalEventHandlers, HTM
 * **HTMLElement.draggable**
    요소가 drag가 가능한지 Boolean으로 반환한다.
 
-* **HTMLElement.dropzon**
+* **HTMLElement.dropzone**
   dropzone이 더이상 쓰이지 않는다. 모든 브라우저가 지원하지 않음.
 
 * **HTMLElement.hidden**

@@ -33,7 +33,7 @@
 - [Type Guards and Differnetiating Types](typescript/type-guards-and-differnetiating-types.md)
 - [generic handbook 보고 정리](typescript/generic.md)
 
-### JavaScript API
+### JavaScript API 🔥
 
 - [DOM Element - HTML Element](dom-elements/thml-element.md)
 
