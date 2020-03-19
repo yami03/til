@@ -106,7 +106,8 @@ DocumentAndElementEventHandlers, ElementCssInlineStyle, GlobalEventHandlers, HTM
   element와 관련된 contextual menu를  나타내는 HTMMenuElement이다. 아마도 null.. 
 
 * **HTMLElementOrForeignElement.dataset** (READ ONLY)
-   [custom data attributes](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes) (`data-*`) element를 script에서 읽고 쓸 수 있는 DomStringMap으로 return 해준다.
+
+  [custom data attributes](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes) (`data-*`) element를 script에서 읽고 쓸 수 있는 DomStringMap으로 return 해준다.
 이 Access는 DOM과 HTML 에서 가능하다. 읽기만 가능하고 직접 쓸 수 없다.
   **data-**
   data- 시작해야한다. 
@@ -172,8 +173,9 @@ DocumentAndElementEventHandlers, ElementCssInlineStyle, GlobalEventHandlers, HTM
   헐.. 저런 네임 컨벤션이 있는 줄 몰랐넹.
   
 * **HTMLElement.dir**
-   방향을 나타내눈 global attribute를 DOMString으로 반환한다. 가능한 값은 "ltr", "rtl", "auto"이다. 
-   텍스트를 쓰는 방향을 설정하거나 가져올 때 유용하다.
+
+  방향을 나타내눈 global attribute를 DOMString으로 반환한다. 가능한 값은 "ltr", "rtl", "auto"이다. 
+  텍스트를 쓰는 방향을 설정하거나 가져올 때 유용하다.
   아랍어와 히브리어는 RTL 방향성을 사용하는 대표적인 언어이다.
   이미지에 속성으로도 사용할 수 있다.
   title과 alt가 rtl 포맷으로 정의된다. 🙀
