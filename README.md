@@ -11,7 +11,7 @@
 ## Categories
 
 - [TypeScript 🔥](#TypeScript-🔥)
-- [JavaScript API 🔥](#JavaScript-API-🔥)
+- [Web APIs 🔥](#JavaScript-API-🔥)
 - [Algorithm](#algorithm)
 - [Cmder](#cmder)
 - [CSS Rendering](#CSS-Rendering)
@@ -33,7 +33,7 @@
 - [Type Guards and Differnetiating Types](typescript/type-guards-and-differnetiating-types.md)
 - [generic handbook 보고 정리](typescript/generic.md)
 
-### JavaScript API 🔥
+### Web APIs 🔥
 
 - [DOM Element - HTML Element](dom-elements/thml-element.md)
 
