@@ -1,6 +1,6 @@
 # Semantic Versioning 2.0.0
 
-![Semver](.assets/semver01.png)
+![Semver](./assets/semver01.png)
 
 소프트웨어 릴리즈 버전 넘버에 대한 네이밍 시스템이다. 그라바타(Gravatars)의 창시자이자 깃헙(GitHub)의 공동창업자인 톰 프레스턴-베르너(Tom Preston-Werner)가 작성했으며, 오픈소스 프로젝트에 일반적으로 사용된다. 
 npm 등 api 개발 스케쥴을 이해하기 위해선 알아둬야 하며, 버전은 사용자가 이 package (api)가 어떤식으로 변경되었는가를 이해할 수 있게 해준다.
