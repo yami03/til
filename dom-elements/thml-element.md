@@ -219,16 +219,66 @@ DocumentAndElementEventHandlers, ElementCssInlineStyle, GlobalEventHandlers, HTM
   dropzone이 더이상 쓰이지 않는다. 모든 브라우저가 지원하지 않음.
 
 * **HTMLElement.hidden**
+  
   element가 hidden인지 아닌지를 Boolean 값으로 나타낸다.
-엄청기네.. 내일..'ㅁ'
+  모든 presentation mode에서 적용된다. 사용자가 접근 할 수 있도록 되어 있는 콘텐츠를 숨기기 위해 사용해서는 안된다.  css의 display를 사용해서 제어하는것과 다르다.
+  hidden을 적절한 사용 사례
   
-* 
+    * 현재는 관련이 있지만 나중에 필요할 수 있는 콘텐츠
+    * 이전엔 필요했지만 더 이상 필요하지 않은 콘텐츠
+    * 페이지 다른 부분에서 템플릿처럼 재사용되는 콘텐츠 (?)
+    * [drawing buffer](https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers) [offscreen canvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) 만들때?? drawing buffer은 진짜 모르겠다 offscreen canvas: off screen 렌더 할 수 있는 canvas를 제공한다. window와 worker context에서 사용할 수 있다. web workers 단일 쓰레드에서 실행하고 싶지 않을때.. 별도의 background thread에서 사용하고 싶을때
   
-* 
+    부적절한 사용 사례
   
-* 
+    * tab이 있는 dialog box 에서  pannel 숨기기
+    * 한 content에서 한 presentation을 숨기면서 다른 presentation을 볼 수 있게 함
   
-* 
+    ⇒ 아마 접근성 관련된게 아닐까 생각이 듬.. 눈에 보이진 않지만 리더기론 읽을 수 있는 그런것들.. 그래서 눈에만 안보이는게 hidden을 사용하는 곳은 지금은 사용하진 않지만 나중에 사용될, 혹은 이젠 더이상 필요없는것들 한정인거 같다. 이럴땐 css요소를 이용하라는 뜻 같음
+  
+    Elements that are not hidden must not link to elements which are.
+  
+    ‘Hidden’ 해주지 않은 요소는 ‘Hidden’한 요소와 연결 시키지 않아야 한다.
+  
+    **Syntax**
 
-* 
+    ```js
+    isHidden = HTMLElement.hidden;
+
+    HTMLElement.hidden = true | false;
+    ```
+
+  **Value**
+
+  view에서 숨겨져 있다면 true, 아니면 false
+
+  ```html
+  <div id="welcome" class="panel">
+  	<h1>welcome</h1>
+  	<button class="button" id="okButton">OK</button>
+  </div>
+  
+  <div id="awesome" class="panel" hidden>
+  	<h1>Thanks!</h1>
+  	<p>Thank you!</p>
+  </div>
+  
+  document.querySelector("#okButton").addEventListener("click", function() {
+    document.querySelector("#welcome").hidden = true;
+    document.querySelector("#awesome").hidden = false;
+  }, false);
+  ```
+
+  addEventListener의 3번째 인자는 options
+
+  - options
+    - capture: DOM 트리의 하단에 있는 EventTarget 으로 전송하기 전에, 등록된 listener 로 이 타입의 이벤트의 전송여부를 나타내는 Boolean ? 헐 EventTarget과 CurrentTarget 얘기인가.. EventTarget도 제어가 가능하구나..
+    - once: 리스너가 추가한 후 한번만 호출
+    - passive: 이건 처음보네.. true일 때 listener에서 지정한 함수가 preventDefault()를 호출하지 않음을 나타내는 Boolean으로 나타낸다.. 헐? 이런게..
+  - useCapture 위에서 아래로 흐르는 capture과정 
+    modern browsers는 capture라고 불리는 것을 한다.
+    element를 클릭하면 그것은 위에서 아래로 흘러내린다.
+    브라우저는 "너 body도 클릭하고, one도 클릭하고 two도 클릭하고 three도 클릭했네" 하고 인식한다. 
+    실제로 위에서 아래로 내려가다가, 모든 이벤트를 내가 클릭한 곳에 "captures" 를 하고 보관한다. 
+    하지만 이벤트는 실행되지 않는다. 그럼 이제 클릭한 곳에서 "bubble Up"이 일어난다.
 
