@@ -282,3 +282,28 @@ DocumentAndElementEventHandlers, ElementCssInlineStyle, GlobalEventHandlers, HTM
     실제로 위에서 아래로 내려가다가, 모든 이벤트를 내가 클릭한 곳에 "captures" 를 하고 보관한다. 
     하지만 이벤트는 실행되지 않는다. 그럼 이제 클릭한 곳에서 "bubble Up"이 일어난다.
 
+* **[HTMLElement.inert](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert)**
+
+  **User agent** - 사용자를 대신하여 일을 수행하는 소프트웨어 에이전트이다. 예를 들어, 이메일 리더에서는 메일 사용자 에이전트이고, 사용자 에이전트를 뜻하는 용어인 세션 개시 프로토콜에서는 통신 세션 양 쪽 끝을 말한다.(wikipedia)
+
+  유저 에이전트가 사용자 인터렉션 이벤트, 페이지 내 텍스트 검색("페이지에서 찾기"), 텍스트 선택의 목적으로 주어진 노드가 없는 것처럼 동작해야하는지 여부를 나타내는 Boolean 을 반환합니다.
+
+  `inert="true"` element가 가지고 있다면 browser는 `ignore`  한다.
+
+  키보드로 이동하는 사용자가 있다고 하쟈
+
+  햄버거 메뉴가 있고 → 컨텐츠로 이동하는데 햄버거 메뉴 안에 있는 anchor tag 다 이동해야 컨텐츠로 이동한다.
+
+  이를 제어하고자 할때 `inert` 를 사용하게 된다.
+
+  https://youtu.be/fGLp_gfMMGU 참고
+
+*	**[HTMLElement.innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText)**
+
+  node와 하위 자식의  **rendered text** 내용을 나타낸다.
+
+  innerText와 textContent의 차이가 있는데
+
+  innerText는 rendered appearance를 알고 있다.
+
+  `<br>`태그를 같은걸 인식하고, hidden elements를 무시한다.
