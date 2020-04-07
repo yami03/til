@@ -1,4 +1,4 @@
-# HTML Element
+# HTML Element
 
 devdocs: https://devdocs.io/dom/htmlelement
 
@@ -307,3 +307,74 @@ DocumentAndElementEventHandlers, ElementCssInlineStyle, GlobalEventHandlers, HTM
   innerText는 rendered appearance를 알고 있다.
 
   `<br>`태그를 같은걸 인식하고, hidden elements를 무시한다.
+  
+* **[HTMLElement.lang](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/lang)**
+
+   `DOMString` 을 반환
+   property element의 요소와 text content의 기본언어를 get, get 가능하다.
+    [*Tags for Identifying Languages*](https://www.ietf.org/rfc/bcp/bcp47.txt) 정의된 language code를 return 한다.
+   default value는 `unknown` 이다.
+   **Syntax**
+
+   ```js
+   let languageUsed = elementNodeReference.lang; // get 
+   elmentNodeReference.lang = NewLangyage; // set
+   ```
+
+   **Example**
+
+   ```js
+   document.documentElement.lang // get
+   ```
+
+   
+
+* **HTMLElement.noModule**
+   module scripts를 지원하는 유저 에이전트에서 import한 script를 실행할 수 있는지 여부를 나타내는 Boolean이다.
+
+* **[HTMLElement.nonce](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/nonce)**
+  
+   [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 에 사용하는 한번만 사용할 수 있는 암호화된 숫자를 리턴하여 주어진 fetch의 진행을 허용할지 말지 여부를 결정한다. script에서만 nonce 속성이 노출된다.
+  **Examples**
+  
+  ```js
+  let nonce = script['nonce'] || script.getAttribute('nonce');
+  ```
+  
+  getAttribute을 쓴건 과거 브라우저들 용, `script['nonce']` 최신 브라우저 용이다.
+  최근 부라우저에서 accsess하는 방법은 `script['nonce']` 이렇게 밖에 없다. nonce 데이터를 유출하는 것을 방지하는 데 도움이 된다.
+  https://stackoverflow.com/questions/42922784/what-s-the-purpose-of-the-html-nonce-attribute-for-script-and-style-elements
+  더 읽을 거리: https://developers.google.com/web/fundamentals/security/csp/#if_you_absolutely_must_use_it
+  
+* **HTMLElement.spellcheck**
+   [spell-checking](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck) 을 control하는 Boolean이다.. 네? 이런게 있었다고요? 🙄
+
+* **htmlelement.style**
+   [`CSSStyleDeclaration`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration) 이다. 요소의 인라인 스타일을 설정하기 위해 사용된다. get할 때에는 요소의 인라인 스타일 속성에 정의된 모든 스타일 속성을 포함하는  css선언을 담은 CSSTyleDeclation 객체를 반환한다.
+
+   **Setting**
+   읽기전용의 CSStyleDeclation 객체를 반환하기 때문에 문자열을 직접 할당하면 안된다.(elt.style = "color: red" 같은 / elt.style.cssText = "color: blue; border: 1px solid black"; 이렇게 해야한다. )
+   만약 스타일 정의가 여러개 있을 때 특정 스타일만 변경하고자 한다면 특정 스타일에 접근해서 변경하는게 바람직하다. (elt.style.color = "..." 같이) 또는 ( ele.setAttribute('style', '...')) 사용하여 요소 전체를 재정의한다.
+    kebab-case가 아닌 calmel-case로 되어있다.
+   reset은 null이나 ''빈문자열 하지만 IE는 ''빈문자열만 먹힌다.
+
+   ```js
+   // 여러 스타일을 정의 할 때.
+   elt.style.cssText = "color: blue; border: 1px solid black";
+   // Or
+   elt.setAttrubute("style", "color:red; border: 1px solid black");
+   
+   // 특정 스타일만 바꿀 때
+   elt.style.color = "blue";
+   ```
+
+   **Getting**
+   오직 인라인 스타일만 가져온다. <head> section 스타일 규칙이나 외부 스타일 sheet와 같은 다른 규칙 스타일을 가져오지 않는다. 요소의 모든 스타일 요소를 가져오고 싶다면 `window.getComputedStyle()`를 대신 사용하라!
+
+   
+
+* 
+
+* 
+
+* 
