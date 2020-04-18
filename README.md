@@ -11,6 +11,7 @@ https://seula00027.gitbook.io/til/
 
 ## Categories
 
+- [JavaScript API 🔥](#TypeScript-API)
 - [TypeScript 🔥](#TypeScript-🔥)
 - [Web APIs 🔥](#JavaScript-API-🔥)
 - [Algorithm](#algorithm)
@@ -27,6 +28,11 @@ https://seula00027.gitbook.io/til/
 - [ETC](#ETC)
 
 ---
+
+### JavaScript API 🔥
+* String
+  * String(javascript-api/string.md)
+
 
 ### TypeScript 🔥
 
