@@ -32,6 +32,8 @@ https://seula00027.gitbook.io/til/
 ### JavaScript API 🔥
 * String
   * [String](javascript-api/string.md)
+  * [@@iterator](javascript-api/@@iterator.md)
+  * [charAt](javascript-api/charAt.md)
 
 
 ### TypeScript 🔥
