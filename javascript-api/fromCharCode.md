@@ -44,3 +44,19 @@ UTF-16 코드 단위로 구성된 N 길이의 문자열
 
 생각해보니.. String object를 만들 일이 없음.. 
 
+## Examples
+
+```js
+String.fromCharCode(65, 66, 67); // "ABC"
+String.fromCharCode(0x2014); // "-"
+String.fromCharCode(0x12014) // 숫자 1은 무시한다 왜? "-"
+```
+
+## 더 큰 값과 사용하기
+
+모든 유효한 유니코드 값을 처리하려면 fromCharCode()만으로 부족하다.
+
+더 높은 코드 포인트 문자는 하나의 문자를 형성하기 위해 두개의 surrogate 값 을 사용한다.
+
+`String.fromCodePoint()` 을 이용하여 높은 값의 문자를 표현한다.
+
