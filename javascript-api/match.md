@@ -1,6 +1,6 @@
 # string.match
 
-`match()` 메서드는 문자열이 정규식과 매치되는 부분을 검색한 결과를 받는다.
+`match()` 메서드는 문자열에서 정규식과 매치되는 부분을 검색한 결과를 받는다. 
 
 ```js
 const paragraph = 'Cats are the best';
