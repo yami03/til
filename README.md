@@ -4,7 +4,7 @@
 
 매일 공부한 내용을 마크다운으로 정리하자
 
-55 TILS
+74 TILS
 
 ## gitbook에서 보기
 https://seula00027.gitbook.io/til/
@@ -34,7 +34,26 @@ https://seula00027.gitbook.io/til/
   * [String](javascript-api/string.md)
   * [@@iterator](javascript-api/@@iterator.md)
   * [charAt](javascript-api/charAt.md)
-
+  * [charCodeAt](javascript-api/charCodeAt.md)
+  * [codePointAt](javascript-api/codePointAt.md)
+  * [concat](javascript-api/concat.md)
+  * [endsWith](javascript-api/endsWith.md)
+  * [fromCharCode](javascript-api/fromCharCode.md)
+  * [fromCodePoint](javascript-api/fromCodePoint.md)
+  * [includes](javascript-api/includes.md)
+  * [indexOf](javascript-api/indexOf.md)
+  * [length](javascript-api/length.md)
+  * [localeCompare](javascript-api/localeCompare.md)
+  * [match](javascript-api/match.md)
+  * [matchAll](javascript-api/matchAll.md)
+  * [padEnd](javascript-api/padEnd.md)
+  * [padStart](javascript-api/padStart.md)
+  * [raw](javascript-api/raw.md)
+  * [repeat](javascript-api/repeat.md)
+  * [replace](javascript-api/replace.md)
+  * [search](javascript-api/search.md)
+  * [slice](javascript-api/slice.md)
+  
 
 ### TypeScript 🔥
 
