@@ -11,21 +11,21 @@ https://seula00027.gitbook.io/til/
 
 ## Categories
 
-- [JavaScript API 🔥](#TypeScript-API-)
-- [TypeScript 🔥](#TypeScript-)
-- [Web APIs 🔥](#JavaScript-API-)
+- [JavaScript API 🔥](#javascript-api-)
+- [TypeScript 🔥](#typeScript-)
+- [Web APIs 🔥](#web-apis-)
 - [Algorithm](#algorithm)
 - [Cmder](#cmder)
-- [CSS Rendering](#CSS-Rendering)
+- [CSS Rendering](#css-rendering)
 - [Debug](#debug)
-- [ECMAScript 2015](#ECMAScript-2015)
-- [Git from the hell](#Git-from-the-hell)
-- [JavaScript](#JavaScript)
-- [JavaScript-koans](#javaScript-koans)
-- [JavaScript30](#JavaScript30)
+- [ECMAScript 2015](#ecmascript-2015)
+- [Git from the hell](#git-from-the-hell)
+- [JavaScript](#javascript)
+- [JavaScript-koans](#javascript-koans)
+- [JavaScript30](#javascript30)
 - [Markdown](#markdown)
-- [Tip](#Tip)
-- [ETC](#ETC)
+- [Tip](#tip)
+- [ETC](#etc)
 
 ---
 
