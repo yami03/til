@@ -4,7 +4,7 @@
 
 매일 공부한 내용을 마크다운으로 정리하자
 
-74 TILS
+80 TILS
 
 ## gitbook에서 보기
 https://seula00027.gitbook.io/til/
@@ -53,7 +53,13 @@ https://seula00027.gitbook.io/til/
   * [replace](javascript-api/replace.md)
   * [search](javascript-api/search.md)
   * [slice](javascript-api/slice.md)
-  
+  * [split](javascript-api/split.md)
+  * [startsWith](javascript-api/startsWith.md)
+  * [substring](javascript-api/substring.md)
+  * [toLocaleLowerCase](javascript-api/toLocaleLowerCase.md)
+  * [toLocaleUpperCase](javascript-api/toLocaleUpperCase.md)
+  * [toLowerCase](javascript-api/toLowerCase.md)
+
 
 ### TypeScript 🔥
 
