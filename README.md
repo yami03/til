@@ -11,9 +11,9 @@ https://seula00027.gitbook.io/til/
 
 ## Categories
 
-- [JavaScript API 🔥](#TypeScript-API)
-- [TypeScript 🔥](#TypeScript-🔥)
-- [Web APIs 🔥](#JavaScript-API-🔥)
+- [JavaScript API 🔥](#TypeScript-API-)
+- [TypeScript 🔥](#TypeScript-)
+- [Web APIs 🔥](#JavaScript-API-)
 - [Algorithm](#algorithm)
 - [Cmder](#cmder)
 - [CSS Rendering](#CSS-Rendering)
