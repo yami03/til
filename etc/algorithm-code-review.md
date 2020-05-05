@@ -1,6 +1,6 @@
 # 알고리즘 코드리뷰 
 
-* () 쓸데없는 가로 추가
+* () 쓸데없는 괄호 추가
 * for문 if문에 붙여쓰기 주의
 * 파라미터(매개변수) 정보
 * return값 한번에 정리하기
@@ -11,12 +11,12 @@
 * 상수는 변수이름을 대문자로 쓴다. const 사용
 * 세미콜론 빼먹지 말자 'ㅁ'/
 
-###  () 쓸데없는 가로 추가
+###  () 쓸데없는 괄호 추가
 **countApplesAndOranges.js**
 ```js
 return ([applesCount, orangesCount]);
 ```
-쓸데없는 가로가 들어감. console.log를 찍던 () -> 꼼꼼히 확인할 것
+쓸데없는 괄호가 들어감. console.log를 찍던 () -> 꼼꼼히 확인할 것
 
 ### for문 if문에 붙여쓰기
 **divisibleSumPairs.js** 
