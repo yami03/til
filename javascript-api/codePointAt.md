@@ -1,4 +1,4 @@
-# codePointAt
+# string.codePointAt
 
 codePointAt() method는 Unicode code point음수가 아닌 정수를 리턴한다.
 
