@@ -1,4 +1,4 @@
-# charCodeAt
+# string.charCodeAt
 
 주어진 인덱스에 대한 UTF-16 code unit을 나타내는 0 - 65535사이의 정수를 반환한다.
 
