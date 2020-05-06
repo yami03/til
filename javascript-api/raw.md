@@ -7,7 +7,7 @@
 // raw를 사용하지 않았을 때
 `C:\Development\profile\aboutme.html`;
 
-// Windows에서 사용하는 변수 만들기
+// 백슬래시가 빠지지 않게 윈도우 파일 경로를 담는 변수를 만들어라
 const filePath = String.raw`C:\Development\profile\aboutme.html`;
 
 
