@@ -27,7 +27,7 @@ string.raw`templateString`
 
 **callSite**
 
-`{ raw: ['foo', 'bar', 'baz'] } 같이 잘 형성된 template를 호출하는 site object
+`{ raw: ['foo', 'bar', 'baz'] }` 같이 잘 형성된 template를 호출하는 site object
 
 **...substitution**
 
