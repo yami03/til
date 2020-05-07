@@ -31,7 +31,7 @@ const newStr = str.replace(regexp\substr, newSubstr\function);
 
 **newSubStr** (replacement)
 
-매개변수로 지정된 `regexp`(pattern) 나 `substr` (pattern) 문자열을 대체하는 문자, 여러가지 특수 rplacement pattern이 지원되며, "매개변수가 `string`으로 지정" 참고
+매개변수로 지정된 `regexp`(pattern) 나 `substr` (pattern) 문자열을 대체하는 문자, 여러가지 특수 replacement pattern이 지원되며, "매개변수가 `string`으로 지정" 참고
 
 **function** (replacement)
 
