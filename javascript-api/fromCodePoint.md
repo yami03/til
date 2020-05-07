@@ -9,7 +9,7 @@ String.fromCodePoint(9731, 9733, 9842, 0x2F804) // "☃★♲你"
 ## Syntax
 
 ```js
-String.fromCodePoint(num1, [, ...[ numN]])
+String.fromCodePoint(num1, [, ...[ numN ]])
 ```
 
 ### Parameters
