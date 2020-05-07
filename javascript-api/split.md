@@ -64,7 +64,7 @@ UTF-16 코드 유닛이 아닌 유니코드 문자(코드포인트) 하나씩 �
 
 ## Description
 
-`separator`가 반견됐을 때 문자열은 삭제되고, 남은 문자열은 배열로 반환된다. 만약  `separator` 가 포획괄호(capturing parentheses)를 포함하는 정규식일 경우, `separator` 가 일치할 때 마다 포획 괄호의 (정의되지 않은 경우도 포함하여) 결과가 배열의 해당 위치에 포함된다. 
+`separator`가 발견됐을 때 문자열은 삭제되고, 남은 문자열은 배열로 반환된다. 만약  `separator` 가 포획괄호(capturing parentheses)를 포함하는 정규식일 경우, `separator` 가 일치할 때 마다 포획 괄호의 (정의되지 않은 경우도 포함하여) 결과가 배열의 해당 위치에 포함된다. 
 
 `separator`가 배열인 경우, 해당 배열은 문자열로 강제 변환되어 `sperator`로 사용된다. 
 
