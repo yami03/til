@@ -53,7 +53,7 @@ String.fromCodePoint('_'); //  RangeError: Invalid code point NaN
 
 ## fromCharCode()와 비교
 
-String.fromCharCode()는 코드 포인트를 지정하여 0x010000 – 0x10FFFF를 반환할 수 있다. 대신 반환하려면 UTF-16의 surrogate pair가 필요하다. \
+String.fromCharCode()는 코드 포인트를 지정하여 0x010000 – 0x10FFFF를 반환할 수 있다. 대신 반환하려면 UTF-16의 surrogate pair가 필요하다.
 
 ```js
 String.fromCharCode(0xD83C, 0xDF03); // "🌃"
