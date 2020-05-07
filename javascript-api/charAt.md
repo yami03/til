@@ -80,7 +80,7 @@ Supplementary Characters는 유니코드의 2바이트 기본 범위에 속하�
 16비트 코드 두개를 사용하여 문자 하나를 표현한 것을 surrogate pair라고 하며 high surrogate, low surrogate로 이루어짐
 
 ```js
-var str = 'A\uD87E\uDC04Z'; // 또한 비 BMP 문자를 직접 사용할 수도 있다.
+let str = 'A\uD87E\uDC04Z'; // 또한 비 BMP 문자를 직접 사용할 수도 있다.
 
 for (let i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
@@ -91,7 +91,7 @@ for (let i = 0, chr; i < str.length; i++) {
 }
 
 function getWholeCharAndI(str, i) {
-  var code = str.charCodeAt(i);
+  let code = str.charCodeAt(i);
   
   if(Number.isNaN(code)) {
     return ''; // 위치를 찾을 수 없음
@@ -110,7 +110,7 @@ function getWholeCharAndI(str, i) {
       throw 'High surrogate without following low surrogate';
     }
     
-    var next = str.charCodeAt(i + 1);
+    let next = str.charCodeAt(i + 1);
     if(0xDC00 > next || next > 0xDFFF) {
       throw 'High surrogate without following low surrogate';
     }
@@ -121,7 +121,7 @@ function getWholeCharAndI(str, i) {
   if(i === 0) {
     throw 'Low surrogate without preceding high surrogate';
   }
-  var prev = str.charCodeAt(i - 1);
+  let prev = str.charCodeAt(i - 1);
   
   // high private surrogates를 단일 문자로 처리하기 위해 마지막 16진수를 0xDB7F로 변경할 수 있음
   if(0xD800 > prev || prev > 0xDBFF) {
@@ -138,18 +138,18 @@ function getWholeCharAndI(str, i) {
 non-BMP 문자들을 지원하는 예는 👆 위 예제들이 더 자주 사용되지만, 인덱스로 문자를 선택하는데 있어서 문자열 내에 Surrogate Pair가 하나의 문자열로 처리되길 원한다면! 👇
 
 ```js
-var str = 'A\uD87E\uDC04Z';
+let str = 'A\uD87E\uDC04Z';
 
 console.log(fixedCharAt(str,1));
 
 function fixedCharAt(str, idx) {
-  var ret = '';
+  let ret = '';
   str += '';
-  var end = str.length;
+  let end = str.length;
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+	let surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str) != null)) {
-    var li = surrogatePairs.lastIndex;
+    let li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx ++
     } else {
@@ -168,4 +168,5 @@ function fixedCharAt(str, idx) {
   return ret;
 }
 ```
+
 
