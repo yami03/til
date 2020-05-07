@@ -33,6 +33,7 @@ new Iterator Object
 ## Examples
 
 ### Using `[@@iterator]()`
+surrogate pair(UTF-16 코드 두개를 사용하여 하나의 글자를 나타낸 것)때도 안깨지는 것을 확인 할 수 있다.
 
 ```js
 const str = 'A\uD835\uDC68';
@@ -49,8 +50,6 @@ for..of 구문은 컬렉션 전용
 [Symbol.iterator]속성이 있는 모든 컬렉션 요소에 대해 이 방식으로 반복한다.
 
 ```js
-String.prototype.strCustom = function () {};
-
 let iterable = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (let i of iterable) {
@@ -59,4 +58,3 @@ for (let i of iterable) {
 ```
 
 Browser compatibillity: IE, Opera, Safari에서 No
-
