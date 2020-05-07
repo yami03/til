@@ -1,4 +1,4 @@
-# string.toLocaleUperCase()
+# string.toLocaleUpperCase()
 
 `toLocaleUpperCase()` 메서드는 임의의 locale 고유 케이스 매핑에 따라 참조 문자열 값을 대문자로 변환하여 반환한다.
 
