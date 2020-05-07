@@ -49,7 +49,7 @@ UTF-16 코드 단위로 구성된 N 길이의 문자열
 ```js
 String.fromCharCode(65, 66, 67); // "ABC"
 String.fromCharCode(0x2014); // "-"
-String.fromCharCode(0x12014) // 숫자 1은 무시한다 왜? "-"
+String.fromCharCode(0x12014) // 숫자 1은 무시한다 왜? "-" 0xFFFF보다 큰 수는 자른다. 
 ```
 
 ## 더 큰 값과 사용하기
