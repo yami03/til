@@ -3,7 +3,7 @@
 ## Delete Local Branch
 
 ```shell
-git branch -d [브랜치명]
+git branch -d <branch_name>
 ```
 
 ### Delete Remote Branch
