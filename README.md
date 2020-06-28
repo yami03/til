@@ -29,6 +29,9 @@ https://seula00027.gitbook.io/til/
 
 ---
 
+### Books 🔥
+* [객체지향의 사실과 오해 - 역할, 책임, 협력 관점에서 본 객체지향](books/the-essence-of-object-orientation)
+
 ### JavaScript API 🔥
 * String
   * [String](javascript-api/string.md)
