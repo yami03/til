@@ -80,7 +80,7 @@ undefined와 연산할 수 있다는 에러를 알려준다.
 
 바디내용 리턴이 정확하게 되지 않는다면 에러뿜뿜  
 
-### 2. interface와 type alias
+###2. interface와 type alias
 
 #### 이름기반으로 역할 분리 nominal type system
 
@@ -199,5 +199,312 @@ tellme(function dToD(d: StartupDeveloper): Developer {
 	return new Developer ();
 });
  ```
+
+#### unknown은 any 대신
+
+제안을 만들어 가면서 한다.
+
+```ts
+function fUnknown(a: unknown): number | string | void {
+  a.toString(); // error! Object is of type 'unknown'.
+  
+  // unknown 을 사용하면서 제안을 만들어 간다.
+  if(typeof a === 'number') {
+    return a * 38;
+  } else if (typeof a === 'string') {
+    return `Hellow ${a}`;
+  }
+}
+```
+
+
+
+### 4. 타입 추론 이해하기
+
+#### let과 const의 타입 추론 (+as const)
+
+```ts
+let a = 'Mark'; // string
+const b = 'Nark'; // 'Mark' => literal type
+
+let c = 38; // number
+const d = 38; // 38 => literal type
+
+let e = false; // boolean
+const f = false; // false => literal type
+
+let g = ['Mark', 'Haeun']; // string[]
+const h = ['Mark', 'Haeun'] // string[]
+
+const i = ['Mark', 'Haeun', 'Bokdang'] as const; // readonly ['Mark', 'Haeun', 'Bokdang']
+```
+
+#### Best common type
+
+가장 공통적인 타입을 찾아낸다. 
+
+```ts
+let j = [0, 1, null]; // (number | null)[]
+const k = [0, 1, null]; // (number | null)[]
+
+class Animal {}
+class Rhino extends Animal {}
+class Elephant extends Animal {}
+class Snake extends Animal {}
+
+let i = [new Rhino(), new Elephant(), new Snake()]; // (Rhino | Elephant | Snake)[]
+const m = [new Rhino(), new Elephant(), new Snake()]; // (Rhino | Elephant | Snake)[]
+const n = [new Animal(), new Rhino(), new Elephant(), new Snake()]; // Animal[] 부모가 존재하면 부모가 타입으로 지정된다.
+const o: Animal[] =  [new Rhino(), new Elephant(), new Snake()]; // Animal[]
+```
+
+### Contextual Typing - 위치에 따라 추론이 다름
+
+```ts
+const click = (e) => {
+  e; // 여기선 any
+};
+
+document.addEventListener('click', click);
+document.addEventListener('click', (e) => {
+  e; // 여기선 MouseEvent로 추론된댜
+})
+```
+
+
+
+## 5. Type Guard 로 안전함을 파악하기
+
+### 1. typeof Type Guard - 보통 Primitive 타입일 경우
+
+```ts
+function getNumber(value: number | string): number {
+  value; // number | string
+  if (typeof value === 'number') {
+    value; // number로 추론
+    return value;
+  }
+}
+```
+
+### 2. instanceof Type Cuard
+
+```ts
+interface IMachine {
+  name: string;
+}
+
+class Car implements IMachine {
+  name: string;
+  wheel: number;
+}
+
+class Boat implements IMachine {
+  name: string;
+  motor: number;
+}
+
+function getWhellOrMotor(machine: Car | Boat): number {
+  if(machine instanceof Car) {
+    return machine.wheel; // Car
+  } else {
+    return machine.motor; // Boat
+  }
+}
+```
+
+### instanceof Type Guard를 많이 사용하는 경우 Error 처리
+
+```ts
+class NegativeNumberError extends Error {}
+
+function getNumber (value: number): number | NegativeNumberError {
+  if (value < 0) return new NegativeNumberError();
+  
+  return value;
+}
+
+function main() {
+  const num = getNumber(-10);
+  
+  if(num instanceof NegativeNumberError) {
+    return;
+  }
+  
+  num; // number 타입
+}
+```
+
+### in operator Type Guard - object의 프로퍼티 유무로 처리하는 경우
+
+```ts
+interface Admin {
+  id: string;
+  role: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+}
+
+function redirect(user: Admin | user) {
+  if('role' in user) { // user is admin인지 쉽게 체크할 수 있다.
+     routeToAdminPage(user.role);
+  } else {
+    routerToHomePage(user.email);
+  }
+}
+
+
+```
+
+### literal Type Guard - object의 프로퍼티가 같고, 타입이 다른 경우
+
+```ts
+interface IMachine {
+  type: string
+}
+
+class Car implements IMachine {
+  type: 'CAR';
+  wheel: number;
+}
+
+class Boat implements IMachine {
+  type: 'BOAT';
+  motor: number;
+}
+
+function getWhellOrMotor(machine: Car | Boat): number {
+  if(machine.type === 'CAR') { // reducer의 action.type으로 조건문 사용가능?
+    return machine.wheel;
+  } else {
+    return machine.motor;
+  }
+}
+```
+
+### custom Type Guard
+
+```ts
+function getWhellOrMotor(machine: any): number {
+  if(isCar(machine)) {
+    return machine.wheel;
+  } else if(isBoat(machine)) {
+    return machine.motor;
+  } else {
+    return -1;
+  }
+}
+
+function isCar(arg: any): arg is Car {
+  return arg.type === 'CAR';
+}
+
+function isBoat(arg: any): arg is Boat {
+  return arg.type === 'BOAT';
+}
+```
+
+## Class Property의 타입을 명시적으로 지정해야한다.
+
+```ts
+// v3.9.7 
+class Square1 {
+  area; // error! implicit any
+  sideLength; // error! implicit any
+}
+```
+
+```ts
+// v3.9.7 
+class Square1 {
+  area: number;
+  sideLength: number;
+}
+
+const square2 = new Square2();
+console.log(square2.area);
+consele.log(square2.sideLength); // compile time - number but runtime undefined
+```
+
+> **stirctPropertyInitialization** 옵션을 켜면
+> class의 property가 생성자 혹은 선언에서 값이 지정되지 않으면,
+> 컴파일 에러를 발생시켜 주의를 준다.
+
+초기값을 설정하던가
+
+```ts
+class Square1 {
+  area: number = 0;
+  sideLength: number = 0;
+}
+```
+
+생성자에서 초기화를 한다.
+
+```ts
+// v3.9.7 
+class Square1 {
+  area: number;
+  sideLength: number;
+  
+  constructor(sideLength: number) {
+    this.sideLength = sideLength;
+    this.area = sideLength ** 2;
+  }
+}
+```
+
+**v4.0.2 부터는 생성자에 의해 추론된다.**
+
+```ts
+class Square5 {
+  area;
+  sideLength;
+  
+  constructor (sideLength: number) {
+    this.sideLength = sideLength;
+    this.area = sideLength ** 2;
+  }
+}
+```
+
+```ts
+class Square6 {
+  sideLength; // number 혹은 undefined로 추론이 된다.
+  
+  constructor (sideLength: number) {
+    if(Math.random()) {
+      this.sideLength = sideLength;
+    }
+  }
+  
+  get area() {
+    return this.sideLength ** 2; // error! Object is possibly 'undefined'
+  }
+}
+```
+
+### 그러나 여전히 생성자를 벗어나지 못하면 추론되지 않는다.
+
+```ts
+class Square7 {
+  sideLength!: number; // 어디선가 number로 초기화 할것이라는 것을 알려준다.
+
+  constructor(sideLength: number) {
+    this.initialize(sideLength);
+  }
+
+  initialize(sideLength: number) {
+    this.sideLength = sideLength;
+  }
+
+  get area() {
+    return this.sideLength **2;
+  }
+}
+```
 
 
